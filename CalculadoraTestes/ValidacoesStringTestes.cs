@@ -27,7 +27,7 @@ namespace CalculadoraTestes
 
                 //Assert
 
-                Assert.Equal(4,resultado);
+                Assert.Equal(3,resultado);
 
         }
         

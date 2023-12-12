@@ -9,5 +9,10 @@ public class CalculadoraImpementacao
 
         }
 
+        public bool EhPar(int num){
+
+            return num % 2 == 0;
+        }
+
 
 }
