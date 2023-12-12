@@ -74,31 +74,45 @@ public class CalculadoraTestes
 
         bool resultado = _calc.EhPar(num1);
 
-        //Arrange
+        //Assert
 
         Assert.True(resultado);
 
     }
 
+    // [Theory] //executar o teste mais de uma vez. Conjunto de testes para ser executados.
+    // [InlineData(2)] // Passar parâmetros, e para cada é um teste diferente.
+    // [InlineData(4)]
+    // [InlineData(6)]
+    // [InlineData(8)]
+    // public void DeveVerificarSeOsNumerosSaoParesERetornarVerdadeiro(int numero){
+
+
+
+
+    //     // Arrange
+
+    //     bool resultado = _calc.EhPar(numero);
+
+    //     //Act
+
+    //     //Assert
+
+    //     Assert.True(resultado);
+
+    // }
+
     [Theory] //executar o teste mais de uma vez. Conjunto de testes para ser executados.
-    [InlineData(2)] // Passar parâmetros, e para cada é um teste diferente.
-    [InlineData(4)]
-    [InlineData(6)]
-    [InlineData(8)]
-    public void DeveVerificarSeOsNumerosSaoParesERetornarVerdadeiro(int numero){
+    [InlineData(new int[] {2 , 4})]
+    [InlineData(new int[] {6 , 8, 10})]
+    public void DeveVerificarSeOsNumerosSaoParesERetornarVerdadeiro(int[] numeros){
 
+     
         //Arrange
 
+        // Act //  Assertcls
 
-
-        // Act
-
-        bool resultado = _calc.EhPar(numero);
-
-        //Arrange
-
-        Assert.True(resultado);
-
+        Assert.All(numeros, num => Assert.True(_calc.EhPar(num)));
     }
 
 }
