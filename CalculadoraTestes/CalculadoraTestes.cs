@@ -80,4 +80,25 @@ public class CalculadoraTestes
 
     }
 
+    [Theory] //executar o teste mais de uma vez. Conjunto de testes para ser executados.
+    [InlineData(2)] // Passar parâmetros, e para cada é um teste diferente.
+    [InlineData(4)]
+    [InlineData(6)]
+    [InlineData(8)]
+    public void DeveVerificarSeOsNumerosSaoParesERetornarVerdadeiro(int numero){
+
+        //Arrange
+
+
+
+        // Act
+
+        bool resultado = _calc.EhPar(numero);
+
+        //Arrange
+
+        Assert.True(resultado);
+
+    }
+
 }
