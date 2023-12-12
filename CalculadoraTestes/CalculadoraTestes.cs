@@ -18,8 +18,21 @@ public class CalculadoraTestes
     {
 
         //Arrange - prepara o cenário
+
+        int num1 = 5;
+
+        int num2 = 10;
+
         //Act - ação
+
+
+        int resultado = _calc.Somar(num1,num2);
+
         //Assert - validação
+
+        Assert.Equal(15,resultado);
+
+        
 
 
 
