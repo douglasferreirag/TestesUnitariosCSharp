@@ -37,4 +37,30 @@ public class CalculadoraTestes
 
 
     }
+
+    [Fact]
+    public void DeveSomar10Com10ERetornar20()
+    {
+
+        //Arrange - prepara o cenário
+
+        int num1 = 10;
+
+        int num2 = 10;
+
+        //Act - ação
+
+
+        int resultado = _calc.Somar(num1,num2);
+
+        //Assert - validação
+
+        Assert.Equal(20,resultado);
+
+        
+
+
+
+    }
+
 }
